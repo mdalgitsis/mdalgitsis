@@ -7,25 +7,53 @@ RAN, Kubernetes orchestration, MEC, and the APIs that let one drive the other. C
 
 Most of my work is the unglamorous middle layer: packaging network functions so they actually deploy, making
 infrastructure observable down to the radio, and designing the interfaces that let an orchestrator act on what
-it sees. On the research side I publish on network slice federation and cloud-native service orchestration for
-5G and 6G.
+it sees. A recurring theme is failures that are **silent** — a CAPIF that disables itself and answers
+normally, a load balancer that announces from no node and logs nothing, a GPU that never reaches the guest.
+Most of what I build asserts rather than assumes.
 
-### Selected work
+On the research side I publish on network slice federation and cloud-native service orchestration for 5G and
+6G, and I am writing a PhD thesis in the same area.
 
-**[open5gs-k8s](https://github.com/mdalgitsis/open5gs-k8s)** — A complete Open5GS 5G Standalone core on
-Kubernetes, built for edge research. The UPF is relocatable: one flag moves the user plane to edge nodes while
-the control plane stays central, which is the topology that makes edge offload measurable. Network slicing via
-S-NSSAI, Prometheus metrics, a UERANSIM gNB/UE simulator, and the Dockerfiles for every image it needs.
+### Work
 
-**[mec-edge-site](https://github.com/mdalgitsis/mec-edge-site)** — A Multi-access Edge Computing site: a
-kubeadm cluster, ETSI OSM integration for orchestrating network functions, and an observability stack that
-reaches past containers into the mobile network — per-UE throughput, MCS and SNR from a live Amarisoft RAN
-landing in the same Prometheus as your pod metrics. Includes the Edge-API, a REST interface for driving cluster
-workloads and scaling remotely.
+Grouped by what the problem is, rather than by language.
 
-**[BIND5G](https://github.com/mdalgitsis/BIND5G)** — My contributions to the Basque Industry 5G project: the
-Network as a Service API specification, cross-site Prometheus federation with Thanos, and the WireGuard
-site-to-site VPN that federation runs over.
+**Orchestration and federation** — making independently-run platforms cooperate
+
+- **[sliceweaver](https://github.com/mdalgitsis/sliceweaver)** — Per-slice agents that negotiate
+  bandwidth through Kubernetes Custom Resources. Two Go operators, a per-slice agent and a 5G
+  simulator, with the CRs as the only interface: every decision is an object you can read, diff and
+  replay, and any Kubernetes-aware orchestrator can drive it.
+- **[ipsec-interconnect-operator](https://github.com/mdalgitsis/ipsec-interconnect-operator)** — A
+  Kubernetes operator configuring IPsec tunnels between operator platforms through a vendor-neutral
+  API with pluggable southbound drivers (strongSwan, VyOS). The tunnel is infrastructure with its own
+  lifecycle, so it deliberately knows nothing about whatever consumes it.
+- **[openop-federation-lab](https://github.com/mdalgitsis/openop-federation-lab)** — Standing up two
+  independent operator platforms and federating them: cross-domain OAuth2, two Keycloak realms, and
+  the investigation notes from making it actually work.
+- **[BIND5G](https://github.com/mdalgitsis/BIND5G)** — Network as a Service API specification,
+  cross-site Prometheus federation with Thanos, and the WireGuard VPN that federation runs over.
+
+**5G core, RAN and network exposure**
+
+- **[open5gs-k8s](https://github.com/mdalgitsis/open5gs-k8s)** — A complete Open5GS 5G Standalone
+  core on Kubernetes with a **relocatable UPF**: one flag moves the user plane to edge nodes while
+  the control plane stays central, which is the topology that makes edge offload measurable.
+- **[nef-capif-testbed](https://github.com/mdalgitsis/nef-capif-testbed)** — A 3GPP NEF against a
+  simulated core with ETSI OpenCAPIF doing real API authorisation, including why a half-configured
+  CAPIF is indistinguishable from a working open one.
+- **[mec-edge-site](https://github.com/mdalgitsis/mec-edge-site)** — A MEC site whose observability
+  reaches past containers into the radio: per-UE throughput, MCS and SNR from a live Amarisoft RAN
+  landing in the same Prometheus as pod metrics.
+
+**Platform and infrastructure**
+
+- **[rke2-kubernetes-cluster](https://github.com/mdalgitsis/rke2-kubernetes-cluster)** — Ansible for
+  HA RKE2: embedded-etcd control plane, air-gapped installs, and runbooks for upgrade, backup,
+  restore and rotation. Passes `ansible-lint` at the production profile.
+- **[kubevirt-gpu-passthrough](https://github.com/mdalgitsis/kubevirt-gpu-passthrough)** — Running
+  VMs with a physically passed-through GPU on Kubernetes, including a Windows guest over RDP. Every
+  link in the host-to-guest chain fails silently, so each one is asserted rather than assumed.
 
 ### Publications
 
@@ -63,9 +91,15 @@ API, with a decision engine scaling edge applications through a Kubernetes OpenA
 
 ### What I work with
 
-`Kubernetes` · `Helm` · `Ansible` · `Terraform` · `Docker` · `Go` · `Python`
-`Open5GS` · `UERANSIM` · `Amarisoft` · `ETSI OSM` · `ETSI MEC` · `O-RAN`
-`Prometheus` · `Grafana` · `Thanos` · `OpenAPI` · `3GPP 5G SA`
+**Platform** · `Kubernetes` `kubebuilder` `Helm` `kustomize` `Ansible` `Terraform` `KubeVirt` `Docker`
+
+**Languages** · `Go` `Python` `FastAPI`
+
+**Mobile networks** · `Open5GS` `free5GC` `UERANSIM` `Amarisoft` `3GPP 5G SA` `O-RAN`
+
+**Standards and orchestration** · `ETSI MEC` `ETSI OSM` `ETSI OpenOP` `CAPIF` `CAMARA` `OpenAPI`
+
+**Observability** · `Prometheus` `Grafana` `Thanos`
 
 ### Elsewhere
 
