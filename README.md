@@ -7,7 +7,8 @@ RAN, Kubernetes orchestration, MEC, and the APIs that let one drive the other. C
 
 Most of my work is the unglamorous middle layer: packaging network functions so they actually deploy, making
 infrastructure observable down to the radio, and designing the interfaces that let an orchestrator act on what
-it sees.
+it sees. On the research side I publish on network slice federation and cloud-native service orchestration for
+5G and 6G.
 
 ### Selected work
 
@@ -28,14 +29,25 @@ site-to-site VPN that federation runs over.
 
 ### Publications
 
-- M. Dalgitsis, N. Cadenelli, M. A. Serrano, N. Bartzoudis, L. Alonso, A. Antonopoulos,
-  "Cloud-Native Orchestration Framework for Network Slice Federation Across Administrative Domains in 5G/6G
+First author:
+
+- "6G-Core-in-the-Loop: Enabling Service and Network Orchestration in a Cloud-Native Ecosystem,"
+  **IEEE Communications Standards Magazine**, vol. 10, pp. 72–79, 2026.
+  [doi:10.1109/MCOMSTD.2026.3657234](https://doi.org/10.1109/MCOMSTD.2026.3657234)
+
+- "Cloud-Native Orchestration Framework for Network Slice Federation Across Administrative Domains in 5G/6G
   Mobile Networks," **IEEE Transactions on Vehicular Technology**, vol. 73, pp. 9306–9319, 2024.
   [doi:10.1109/TVT.2024.3362583](https://doi.org/10.1109/TVT.2024.3362583)
 
-- M. Dalgitsis et al., "NSFaaS: Network Slice Federation as a Service in Cloud-Native 5G and Beyond Mobile
-  Networks," **IEEE NFV-SDN 2023**, pp. 59–64.
+- "NSFaaS: Network Slice Federation as a Service in Cloud-Native 5G and Beyond Mobile Networks,"
+  **IEEE NFV-SDN 2023**, pp. 59–64.
   [doi:10.1109/NFV-SDN59219.2023.10329748](https://doi.org/10.1109/NFV-SDN59219.2023.10329748)
+
+Co-author:
+
+- T. Fernández De Barrena, J. L. Ferrando Chacón, A. García, M. Dalgitsis, "5G and MEC Based Data Streaming
+  Architecture for Industrial AI," **Communications in Computer and Information Science**, pp. 32–52, 2023.
+  [doi:10.1007/978-3-031-49339-3_3](https://doi.org/10.1007/978-3-031-49339-3_3)
 
 - R. Nikbakht, M. Dalgitsis, S. Barrachina-Muñoz, S. Kahvazadeh, "Mobile Edge Vertical Applications Using ETSI
   MEC APIs and Sandbox," **IEEE CSCN 2022** (demo).
@@ -57,4 +69,4 @@ API, with a decision engine scaling edge applications through a Kubernetes OpenA
 
 ### Elsewhere
 
-[LinkedIn](https://www.linkedin.com/in/michaildalgitsis)
+[LinkedIn](https://www.linkedin.com/in/michaildalgitsis/) · [ORCID](https://orcid.org/0000-0001-8660-0813)
