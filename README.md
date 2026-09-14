@@ -57,29 +57,30 @@ Grouped by what the problem is, rather than by language.
 
 ### Publications
 
-First author:
+**16 peer-reviewed publications, 8 as first author** — network slicing, slice federation, cloud-native
+orchestration and edge-cloud service migration for 5G and 6G. The complete list with DOIs is in
+**[PUBLICATIONS.md](PUBLICATIONS.md)**. A selection:
 
 - "6G-Core-in-the-Loop: Enabling Service and Network Orchestration in a Cloud-Native Ecosystem,"
   **IEEE Communications Standards Magazine**, vol. 10, pp. 72–79, 2026.
-  [doi:10.1109/MCOMSTD.2026.3657234](https://doi.org/10.1109/MCOMSTD.2026.3657234)
+  [doi](https://doi.org/10.1109/MCOMSTD.2026.3657234)
 
-- "Cloud-Native Orchestration Framework for Network Slice Federation Across Administrative Domains in 5G/6G
-  Mobile Networks," **IEEE Transactions on Vehicular Technology**, vol. 73, pp. 9306–9319, 2024.
-  [doi:10.1109/TVT.2024.3362583](https://doi.org/10.1109/TVT.2024.3362583)
+- "Cloud-Native Orchestration Framework for Network Slice Federation Across Administrative Domains in
+  5G/6G Mobile Networks," **IEEE Transactions on Vehicular Technology**, vol. 73, pp. 9306–9319, 2024.
+  [doi](https://doi.org/10.1109/TVT.2024.3362583)
+
+- "Coupling Orchestration and DNS for Seamless Service Migration in the Edge–Cloud Continuum,"
+  **IEEE ICNP 2025**. [doi](https://doi.org/10.1109/ICNP65844.2025.11192408)
+
+- "Exploiting 6G RAN and Core Network Information for Intelligent Edge-Cloud Service Orchestration,"
+  **EuCNC/6G Summit 2025**, pp. 369–374.
+  [doi](https://doi.org/10.1109/EuCNC/6GSummit63408.2025.11037032)
 
 - "NSFaaS: Network Slice Federation as a Service in Cloud-Native 5G and Beyond Mobile Networks,"
-  **IEEE NFV-SDN 2023**, pp. 59–64.
-  [doi:10.1109/NFV-SDN59219.2023.10329748](https://doi.org/10.1109/NFV-SDN59219.2023.10329748)
+  **IEEE NFV-SDN 2023**, pp. 59–64. [doi](https://doi.org/10.1109/NFV-SDN59219.2023.10329748)
 
-Co-author:
-
-- T. Fernández De Barrena, J. L. Ferrando Chacón, A. García, M. Dalgitsis, "5G and MEC Based Data Streaming
-  Architecture for Industrial AI," **Communications in Computer and Information Science**, pp. 32–52, 2023.
-  [doi:10.1007/978-3-031-49339-3_3](https://doi.org/10.1007/978-3-031-49339-3_3)
-
-- R. Nikbakht, M. Dalgitsis, S. Barrachina-Muñoz, S. Kahvazadeh, "Mobile Edge Vertical Applications Using ETSI
-  MEC APIs and Sandbox," **IEEE CSCN 2022** (demo).
-  [arXiv:2211.13995](https://arxiv.org/abs/2211.13995)
+- "SDN-Based Resource Management for Optical-Wireless Fronthaul," in **Enabling 6G Mobile Networks**,
+  Springer, pp. 467–500, 2021. [doi](https://doi.org/10.1007/978-3-030-74648-3_14)
 
 ### Recognition
 
