@@ -46,6 +46,13 @@ Grouped by what the problem is, rather than by language.
   reaches past containers into the radio: per-UE throughput, MCS and SNR from a live Amarisoft RAN
   landing in the same Prometheus as pod metrics.
 
+**Agents and LLM systems**
+
+- **[agent-lab](https://github.com/mdalgitsis/agent-lab)** — Learning LLM agent development in Go,
+  one concept at a time. Five self-contained stages from a single agent to agent-to-agent
+  communication with a registry, memory and MCP tools. Kept as written, including the stage where
+  four services collapse back into one because the distribution was not paying for itself.
+
 **Platform and infrastructure**
 
 - **[rke2-kubernetes-cluster](https://github.com/mdalgitsis/rke2-kubernetes-cluster)** — Ansible for
@@ -95,6 +102,8 @@ API, with a decision engine scaling edge applications through a Kubernetes OpenA
 **Platform** · `Kubernetes` `kubebuilder` `Helm` `kustomize` `Ansible` `Terraform` `KubeVirt` `Docker`
 
 **Languages** · `Go` `Python` `FastAPI`
+
+**Agents** · `Google ADK` `MCP` `A2A` `LLM tool-calling`
 
 **Mobile networks** · `Open5GS` `free5GC` `UERANSIM` `Amarisoft` `3GPP 5G SA` `O-RAN`
 
