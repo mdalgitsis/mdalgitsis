@@ -24,6 +24,11 @@ Grouped by what the problem is, rather than by language.
   bandwidth through Kubernetes Custom Resources. Two Go operators, a per-slice agent and a 5G
   simulator, with the CRs as the only interface: every decision is an object you can read, diff and
   replay, and any Kubernetes-aware orchestrator can drive it.
+- **[closed-loop-k8s-scaling](https://github.com/mdalgitsis/closed-loop-k8s-scaling)** — Where that
+  idea started: read a workload's CPU out of Thanos, decide, and write desired state into a
+  Kubernetes object an orchestrator watches. Early work, and the README says what it got wrong —
+  a Secret has no schema and no status to read back, so the loop never quite closes. `sliceweaver`
+  is the same loop done properly.
 - **[ipsec-interconnect-operator](https://github.com/mdalgitsis/ipsec-interconnect-operator)** — A
   Kubernetes operator configuring IPsec tunnels between operator platforms through a vendor-neutral
   API with pluggable southbound drivers (strongSwan, VyOS). The tunnel is infrastructure with its own
