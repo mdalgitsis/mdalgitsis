@@ -33,6 +33,11 @@ Grouped by what the problem is, rather than by language.
   Kubernetes operator configuring IPsec tunnels between operator platforms through a vendor-neutral
   API with pluggable southbound drivers (strongSwan, VyOS). The tunnel is infrastructure with its own
   lifecycle, so it deliberately knows nothing about whatever consumes it.
+- **[edge-cloud-dns-testbed](https://github.com/mdalgitsis/edge-cloud-dns-testbed)** — Three
+  Kubernetes sites, each claiming its own address and publishing its own DNS, so a service can
+  migrate between edge and cloud and the name follows it. The infrastructure behind an
+  [IEEE ICNP 2025 paper](https://doi.org/10.1109/ICNP65844.2025.11192408); Ansible, at the
+  `ansible-lint` production profile.
 - **[openop-federation-lab](https://github.com/mdalgitsis/openop-federation-lab)** — Standing up two
   independent operator platforms and federating them: cross-domain OAuth2, two Keycloak realms, and
   the investigation notes from making it actually work.
