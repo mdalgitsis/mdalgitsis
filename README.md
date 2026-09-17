@@ -3,7 +3,8 @@
 Telco and edge-cloud engineer working where mobile networks meet cloud-native infrastructure — 5G cores and
 RAN, Kubernetes orchestration, MEC, and the APIs that let one drive the other. Currently at
 [Nearby Computing](https://www.nearbycomputing.com/) in Barcelona; previously at
-[Vicomtech](https://www.vicomtech.org/) in San Sebastián.
+[Vicomtech](https://www.vicomtech.org/) in San Sebastián and, before that,
+[CTTC](https://www.cttc.es/) in Castelldefels.
 
 Most of my work is the unglamorous middle layer: packaging network functions so they actually deploy, making
 infrastructure observable down to the radio, and designing the interfaces that let an orchestrator act on what
