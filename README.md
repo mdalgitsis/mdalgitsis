@@ -39,6 +39,11 @@ Grouped by what the problem is, rather than by language.
   migrate between edge and cloud and the name follows it. The infrastructure behind an
   [IEEE ICNP 2025 paper](https://doi.org/10.1109/ICNP65844.2025.11192408); Ansible, at the
   `ansible-lint` production profile.
+- **[cell-aware-service-migration](https://github.com/mdalgitsis/cell-aware-service-migration)** —
+  An edge application that follows a moving vehicle between cells. A 5G core already knows which gNB
+  a subscriber is camped on; subscribe to its session events and that is enough to re-pin the
+  workload to the edge node serving the new cell — state endpoint included, or the migrated pod
+  serves the previous site's data. Behind a [BalkanCom 2025 paper](https://doi.org/10.1109/balkancom65827.2025.11185956).
 - **[openop-federation-lab](https://github.com/mdalgitsis/openop-federation-lab)** — Standing up two
   independent operator platforms and federating them: cross-domain OAuth2, two Keycloak realms, and
   the investigation notes from making it actually work.
