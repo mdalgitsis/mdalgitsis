@@ -30,6 +30,14 @@ Grouped by what the problem is, rather than by language.
   Kubernetes object an orchestrator watches. Early work, and the README says what it got wrong —
   a Secret has no schema and no status to read back, so the loop never quite closes. `sliceweaver`
   is the same loop done properly.
+- **[slice-ambr-closed-loop](https://github.com/mdalgitsis/slice-ambr-closed-loop)** — A loop
+  over 5G slice bitrate ceilings: watch the acceptance ratio, and when a fixed split of the budget
+  starts turning demand away, reallocate it. It re-reads what the core is actually enforcing every
+  iteration rather than trusting its own last write, and deciding is kept separate from actuating,
+  so a bad policy produces bad metrics rather than a misconfigured core. The allocation policy sits
+  behind a seven-member interface; the learned one that produced the published results is a
+  colleague's and is not included, so a proportional-fair baseline ships in its place. One of the
+  use cases in the [IEEE Communications Standards Magazine paper](https://doi.org/10.1109/MCOMSTD.2026.3657234).
 - **[ipsec-interconnect-operator](https://github.com/mdalgitsis/ipsec-interconnect-operator)** — A
   Kubernetes operator configuring IPsec tunnels between operator platforms through a vendor-neutral
   API with pluggable southbound drivers (strongSwan, VyOS). The tunnel is infrastructure with its own
@@ -44,6 +52,14 @@ Grouped by what the problem is, rather than by language.
   a subscriber is camped on; subscribe to its session events and that is enough to re-pin the
   workload to the edge node serving the new cell — state endpoint included, or the migrated pod
   serves the previous site's data. Behind a [BalkanCom 2025 paper](https://doi.org/10.1109/balkancom65827.2025.11185956).
+- **[ran-aware-edge-autoscaling](https://github.com/mdalgitsis/ran-aware-edge-autoscaling)** —
+  Scaling edge applications on what the mobile network already knows instead of on CPU, using both
+  halves of it: the core's session data says whether an application belongs at an edge node at all,
+  and the RAN's aggregated cell traffic says how big it should be. Traffic alone cannot tell you to
+  undeploy, because idle users and no users look identical. CPU only tells you the load already
+  arrived. The decision is a pure function, so it reads against the paper's algorithm line by line
+  and every branch is tested without a cluster. Behind a
+  [EuCNC/6G Summit 2025 paper](https://doi.org/10.1109/EuCNC/6GSummit63408.2025.11037032).
 - **[openop-federation-lab](https://github.com/mdalgitsis/openop-federation-lab)** — Standing up two
   independent operator platforms and federating them: cross-domain OAuth2, two Keycloak realms, and
   the investigation notes from making it actually work.
