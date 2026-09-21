@@ -60,6 +60,12 @@ Grouped by what the problem is, rather than by language.
   arrived. The decision is a pure function, so it reads against the paper's algorithm line by line
   and every branch is tested without a cluster. Behind a
   [EuCNC/6G Summit 2025 paper](https://doi.org/10.1109/EuCNC/6GSummit63408.2025.11037032).
+- **[edge-placement-notifier](https://github.com/mdalgitsis/edge-placement-notifier)** — An
+  orchestrator knows when it moves an edge application to another site; the client does not, and
+  the client is the one that has to reconnect. A Kubernetes operator that publishes one Kafka event
+  when the serving site changes. Exactly-once is the whole problem — a reconcile loop re-runs for a
+  resync or a restart, so what was last announced lives in `status` rather than in memory, and a
+  restarted operator does not tell every client to reconnect again.
 - **[openop-federation-lab](https://github.com/mdalgitsis/openop-federation-lab)** — Standing up two
   independent operator platforms and federating them: cross-domain OAuth2, two Keycloak realms, and
   the investigation notes from making it actually work.
